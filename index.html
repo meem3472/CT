@@ -175,7 +175,7 @@
       }
 
       .hero-text button {
-        padding: 10px 22px;
+        padding: 12px 24px;
         font-size: 14px;
       }
 
@@ -198,15 +198,50 @@
       footer {
         font-size: 13px;
       }
+
+      .hero-text img {
+        max-width: 180px;
+      }
+
+      .hero-text button {
+        width: 100%;
+        text-align: center;
+      }
     }
 
-    .hero-text {
-      padding: 60px 30px;
+    /* Logo responsiveness */
+    .hero-text img {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 20px;
     }
 
-    .hero-text h1 {
-      font-size: 40px;
+    /* Price list styling */
+    .price-list {
+      margin-top: 12px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.15);
+      padding-top: 12px;
     }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .price-item span {
+      opacity: 0.85;
+    }
+
+    .price-tag {
+      background: linear-gradient(135deg, #c89b3c, #e6c77a);
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -215,8 +250,11 @@
 
   <header>
     <div class="hero-text">
-      <img src="logo.png" style="max-width: 250px;" />
-      <h1>Crumble Theory</h1>
+      <div style="width: 100%; text-align:center;">
+        <img src="logo.png" style="max-width: 50%" />
+
+        <h1>Crumble Theory</h1>
+      </div>
       <p>Handcrafted cookies, cheesecakes and biscuits baked with love. Fresh. Rich. Irresistible.</p>
       <a href="#menu"><button>View Menu</button></a>
     </div>
@@ -233,7 +271,13 @@
         <img src="one.jpg" alt="Chocolate Cookies">
         <div class="card-content">
           <h3>Chocolate Chip Cookies</h3>
-          <p>6 pcs – 150–180gm - ₹299/-<br>10 pcs – 200–400gm - ₹480/-<br>20 pcs – 300–600gm - ₹999/-</p>
+          <br>
+          
+          <div class="price-list">
+            <div class="price-item"><span>6 pcs (150–180gm)</span><span class="price-tag">₹299</span></div>
+            <div class="price-item"><span>10 pcs (200–400gm)</span><span class="price-tag">₹480</span></div>
+            <div class="price-item"><span>20 pcs (300–600gm)</span><span class="price-tag">₹999</span></div>
+          </div>
           <!-- <div class="price">Starting ₹299</div> -->
         </div>
       </div>
@@ -243,27 +287,37 @@
         <div class="card-content">
           <h3>Cheesecake</h3>
           <p>Biscoff, Strawberry & Chocolate flavours available.</p>
-
-          <div>₹680/-</div>
+          <div class="price-list">
+            <div class="price-item"><span>180–200gm</span><span class="price-tag">₹680</span></div>
+          </div>
           <!-- <div class="price">₹680</div> -->
         </div>
       </div>
 
       <div class="card">
-        <img src="three.webp" alt="Nankhatai">
+        <img src="four.jpeg" alt="Nankhatai">
         <div class="card-content">
           <h3>Nankhatai</h3>
-          <p>10 pcs – 180–200gm - ₹300/-<br>20 pcs – 200–400gm - ₹800/-</p>
+          <br>
+          <br>
+          <div class="price-list">
+            <div class="price-item"><span>10 pcs (180–200gm)</span><span class="price-tag">₹300</span></div>
+            <div class="price-item"><span>20 pcs (200–400gm)</span><span class="price-tag">₹800</span></div>
+          </div>
           <!-- <div class="price">From ₹300</div> -->
         </div>
       </div>
 
       <div class="card">
-        <img src="four.jpeg" alt="Butter Biscuits">
+        <img src="four.jpg" alt="Butter Biscuits">
         <div class="card-content">
           <h3>Butter Biscuits</h3>
           <p>Pistachio, Almond & Cashew flavours.</p>
-          <p>6 pcs – 180–200gm - ₹380/-<br>10 pcs – 200–400gm - ₹780/-<br>20 pcs – 300–700gm - ₹980/-</p>
+          <div class="price-list">
+            <div class="price-item"><span>6 pcs (180–200gm)</span><span class="price-tag">₹380</span></div>
+            <div class="price-item"><span>10 pcs (200–400gm)</span><span class="price-tag">₹780</span></div>
+            <div class="price-item"><span>20 pcs (300–700gm)</span><span class="price-tag">₹980</span></div>
+          </div>
 
           <!-- <div class="price">From ₹380</div> -->
         </div>
